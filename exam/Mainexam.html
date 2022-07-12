@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<center>
+		<div id="heading" onmouseenter="changeColor()" onmouseleave="changeToNormal()">
+			<u id="ul" style="color:white;">F1H2O</u>RGUKT
+		</div>
+	</center>
+	<center>
+		<div id="f-div1">	
+ 		<form action="success.html" autocomplete="on" id="myForm" method="post">
+ 			<h2 id="f-h2">Form Validation</h2>
+
+			<input type="text" name="Name" placeholder="User Name" id="uname" oninput="userNameValidation()" required>
+
+			<input type="text" name="mail" placeholder="Email" id="mailid" oninput="mailValidation()">
+
+			<input type="text" id="phonenum" name="phone" placeholder="Phone number" oninput="phoneValidation()" required>
+
+
+			<select name="country" id="country" onclick="countryValidation()">
+				<option value="India" selected>India</option>
+				<option value="America">America</option>
+				<option value="England" selected>England</option>
+				<option value="Germany">Germany</option>
+			</select>
+			<br><br>
+
+
+			<div id="beerdivision">
+				<b>You want beer ?</b><br>
+				<input type="radio" name="beer" id="beeryes">yes
+				<input type="radio" name="beer" id="beerno">no<br>
+			</div>
+
+
+			<br>
+			Payment Type(DD or Account Number) :
+
+			<br><input type="text" placeholder="payment" id="pay-number" oninput="paymentValidation()" required><br>
+
+			<br> 
+			<b>Accomadation :</b><br>
+			<input type="radio" name="Accomadation" id="inuzvid">INUZVID
+			<input type="radio" name="Accomadation" id="ikadapa">IKADAPA<br>
+			<input type="radio" name="Accomadation" id="isklm">ISKLM
+			<input type="radio" name="Accomadation" id="iongole">IONGOLE<br>
+
+			<br><b>Food :</b><br>
+			<input type="checkbox" id="f1" name="foodItem" value="breakfast">Breakfast
+		 	<input type="checkbox" id="f2" name="foodItem" value="snacks">Snacks
+		 	<input type="checkbox" id="f3" name="foodItem" value="lunch">Lunch<br>
+		 	<input type="checkbox" id="f4" name="foodItem" value="tea">Teach
+		 	<input type="checkbox" id="f5" name="foodItem" value="coffee">Coffee
+		 	<input type="checkbox" id="f6" name="foodItem" value="eggs">Eggs<br>
+
+		 	Days :<input type="number" name="days" id="NoOfdays" oninput="Daycount()"><br>
+		 	<p style="width: 300px; height: 14px;" id="tcost"></p>
+
+		 	<br>
+			<input type="submit" style="width:150px; height:30px" id="submitButton" value="Submit" onclick="return validate()">
+		</form>
+	</div>
+	</center>
+		<script>
+		let i=0;
+		function change(){
+			var imgs = ['im1.jpg','im2.jpg','im3.jpg','im4.jpg','im5.jpg'];
+			document.body.style.backgroundImage = "url("+imgs[i]+")";
+			i=(i+1)%imgs.length;
+		}
+		setInterval(change,500);
+		</script>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
